@@ -66,15 +66,16 @@ body {
 }
 /* HEADER */
 .container {
-  max-width: 318px;
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .page-nav {
   display: flex;
@@ -138,17 +139,16 @@ body {
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 766px;
+    max-width: 768px;
   }
+
   .menu {
     display: flex;
     column-gap: 40px;
-    padding-left: 120px;
-    padding-right: 121px;
   }
   .adress-info {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding-top: 16px;
     padding-bottom: 16px;
     row-gap: 12px;
@@ -156,10 +156,15 @@ body {
   .close-icon-item-btn {
     display: none;
   }
+  .page-nav {
+    justify-content: space-between;
+  }
   .page-adress {
     font-style: normal;
     align-items: center;
-    margin-left: auto;
+  }
+  .page-logo {
+    margin-right: 120px;
   }
   .menu-item {
     display: flex;
@@ -195,28 +200,18 @@ body {
     color: #434455;
   }
   .adress-item-link {
-    font-size: 16px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
     color: #434455;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .adress-item-link:hover {
     color: #404bbf;
-  }
-
-  .menu-item.studio::after {
-    background: #404bbf;
-    border-radius: 2px;
-    width: 100%;
-    height: 4px;
-    position: absolute;
-    content: '';
-    left: 0px;
-    bottom: -1px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -226,14 +221,19 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
+  .page-logo {
+    margin-right: 76px;
+  }
   .adress-info {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    flex-direction: row;
     column-gap: 40px;
   }
-  .menu {
-    padding-left: 76px;
-    padding-right: 332px;
+  .adress-item-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
